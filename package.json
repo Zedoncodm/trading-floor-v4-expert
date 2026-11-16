@@ -1,0 +1,22 @@
+{
+  "name": "trading-floor-telegram-desk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trading Floor: six Telegram bots running a PAPER trading desk in one group chat.",
+  "type": "module",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/main.ts",
+    "sim": "node --env-file-if-exists=.env src/main.ts --console",
+    "chat-id": "node --env-file=.env scripts/chat-id.ts",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "playwright": "^1.65.1",
+    "typescript": "^5.9.0"
+  }
+}
